@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.zhangteng.baselibrary.mvvm.vm.BaseMvvmDbDemoDbViewModel" />
+            type="com.zhangteng.app.mvvm.vm.BaseMvvmDbDemoDbViewModel" />
     </data>
 
     <LinearLayout

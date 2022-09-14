@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.zhangteng.baselibrary.mvvm.vm.BaseListMvvmDbDemoDbFragmentViewModel" />
+            type="com.zhangteng.app.mvvm.vm.BaseListMvvmDbDemoDbFragmentViewModel" />
     </data>
 
     <LinearLayout

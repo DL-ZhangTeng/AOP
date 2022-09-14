@@ -5,7 +5,7 @@
 
         <variable
             name="itemData"
-            type="com.zhangteng.baselibrary.http.entity.ArticlesBean" />
+            type="com.zhangteng.app.http.entity.ArticlesBean" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
