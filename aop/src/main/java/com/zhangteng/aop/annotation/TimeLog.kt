@@ -28,4 +28,9 @@ package com.zhangteng.aop.annotation
     AnnotationTarget.PROPERTY_SETTER
 )
 @kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
-annotation class TimeLog(val value: String = "")
+annotation class TimeLog(
+    /**
+     * 时间日志tag
+     */
+    val value: String = "TimeLog"
+)

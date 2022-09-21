@@ -1,7 +1,7 @@
 package com.zhangteng.aop.annotation
 
 /**
- * description: 网络检测注解
+ * description: 登录状态注解，登录状态存入SP中，sp名loginInfo，键isLogin
  * author: Swing
  * date: 2022/7/22
  */
@@ -11,9 +11,9 @@ package com.zhangteng.aop.annotation
     AnnotationTarget.PROPERTY_GETTER,
     AnnotationTarget.PROPERTY_SETTER
 )
-annotation class CheckNet(
+annotation class CheckLogin(
     /**
-     * 无网络时的提示
+     * 登录页全类名
      */
-    val value: String = "当前无网络连接，请检查网络设置"
+    val value: String
 )

@@ -1,7 +1,6 @@
 package com.zhangteng.aop.aspect
 
 import android.content.Context
-import com.zhangteng.aop.R
 import com.zhangteng.aop.annotation.CheckNet
 import com.zhangteng.utils.isConnected
 import com.zhangteng.utils.showShortToast
@@ -29,10 +28,12 @@ class CheckNetAspect {
      */
     @Around("pointCut() && @annotation(checkNet)")
     @Throws(Throwable::class)
-    fun joinPoint(joinPoint: ProceedingJoinPoint, checkNet: CheckNet?) {
+    fun joinPoint(joinPoint: ProceedingJoinPoint, checkNet: CheckNet) {
         val context = joinPoint.getThis() as Context
         if (!context.isConnected()) {
-            context.showShortToast(context.resources.getString(R.string.aop_network_hint))
+            if (checkNet.value.isNotEmpty()) {
+                context.showShortToast(checkNet.value)
+            }
             return
         }
         //执行原方法

@@ -24,9 +24,9 @@ class TimeLogAspect {
     }
 
     // 2、对切入点如何处理
-    @Around("pointCut()")
+    @Around("pointCut() && @annotation(timeLog)")
     @Throws(Throwable::class)
-    fun joinPoint(joinPoint: ProceedingJoinPoint): Any? {
+    fun joinPoint(joinPoint: ProceedingJoinPoint, timeLog: TimeLog) {
         val stringBuilder = StringBuilder()
         //1.获取切入点所在目标对象
         val targetObj = joinPoint.target
@@ -52,14 +52,12 @@ class TimeLogAspect {
             stringBuilder.append(" \n")
             stringBuilder.append("参数：").append(o)
         }
-        val context = joinPoint.getThis() as Context?
         val startTime = System.currentTimeMillis()
-        val response = joinPoint.proceed()
+        joinPoint.proceed()
         val endTime = System.currentTimeMillis()
         val duration = endTime - startTime
         stringBuilder.append(" \n")
         stringBuilder.append("耗时：").append(duration).append("ms")
-        Log.d("TimeLog", stringBuilder.toString())
-        return response
+        Log.d(timeLog.value, stringBuilder.toString())
     }
 }
