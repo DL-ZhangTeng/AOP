@@ -30,14 +30,11 @@ implementation 'com.github.DL-ZhangTeng:AOP:2.0.0'
 ## aop工具包（com/zhangteng/aop）
 工具包名/类名| 描述
 --- | ---
-TimeLog| 在需要打印耗时时间的方法添加此注解
-TimeLogAspect| 耗时时间方法切入点处理逻辑
+CheckLogin| 在需要检测登录状态的方法添加此注解，登录状态存入SP中，sp名loginInfo，键isLogin
 CheckNet| 在需要网络检测的方法添加此注解
-CheckNetAspect| 网络检测方法切入点处理逻辑
 Permissions| 在需要权限申请的方法添加此注解
-PermissionsAspect| 权限申请方法切入点处理逻辑
 SingleClick| 在需要防重复点击的方法添加此注解
-SingleClickAspect| 防重复点击方法切入点处理逻辑
+TimeLog| 在需要打印耗时时间的方法添加此注解
 
 ## 混淆
 -keep public class com.zhangteng.**.*{ *; }
