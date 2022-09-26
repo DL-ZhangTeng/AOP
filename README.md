@@ -28,21 +28,21 @@ aspectjx {
 implementation 'com.github.DL-ZhangTeng:AOP:2.0.0'
 ```
 ## aop工具包（com/zhangteng/aop）
-工具包名/类名| 描述
---- | ---
-CheckLogin| 在需要检测登录状态的方法添加此注解，登录状态存入SP中，sp名loginInfo，键isLogin
-CheckNet| 在需要网络检测的方法添加此注解
-Permissions| 在需要权限申请的方法添加此注解
-SingleClick| 在需要防重复点击的方法添加此注解
-TimeLog| 在需要打印耗时时间的方法添加此注解
+| 工具包名/类名     | 描述                                                |
+|-------------|---------------------------------------------------|
+| CheckLogin  | 在需要检测登录状态的方法添加此注解，登录状态存入SP中，sp名loginInfo，键isLogin |
+| CheckNet    | 在需要网络检测的方法添加此注解                                   |
+| Permissions | 在需要权限申请的方法添加此注解                                   |
+| SingleClick | 在需要防重复点击的方法添加此注解                                  |
+| TimeLog     | 在需要打印耗时时间的方法添加此注解                                 |
 
 ## 混淆
 -keep public class com.zhangteng.**.*{ *; }
 ## 历史版本
 
-版本| 更新| 更新时间
---- | --- | ---
-v2.0.0| 从BaseLibrary分离出AOP| 2022/9/14 at 22:36
+| 版本     | 更新                 | 更新时间               |
+|--------|--------------------|--------------------|
+| v2.0.0 | 从BaseLibrary分离出AOP | 2022/9/14 at 22:36 |
 
 ## 赞赏
 如果您喜欢AOP，或感觉AOP帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢
