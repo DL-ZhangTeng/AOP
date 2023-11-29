@@ -1,6 +1,5 @@
 package com.zhangteng.aop.aspect
 
-import android.content.Context
 import android.util.Log
 import com.zhangteng.aop.annotation.TimeLog
 import org.aspectj.lang.ProceedingJoinPoint

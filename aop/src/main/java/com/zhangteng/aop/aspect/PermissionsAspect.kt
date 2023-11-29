@@ -38,7 +38,7 @@ class PermissionsAspect {
         if (activity == null || activity.isFinishing || activity.isDestroyed) {
             return
         }
-        AndroidPermission.Buidler()
+        AndroidPermission.Builder()
             .with(activity)
             .permission(*permissions.value)
             .callback(object : Callback {
